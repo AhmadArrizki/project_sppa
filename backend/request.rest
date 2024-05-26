@@ -1,0 +1,28 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsIm5hbWUiOiJLaWtpIiwiZW1haWwiOiJraWtpQGdtYWlsLmNvbSIsImlhdCI6MTcxNjY2NDk0NCwiZXhwIjoxNzE2NjY0OTU5fQ.EOjbC0kim-h-igkyXqtBaa_mI4j3CyNn0u9QunrmZmM
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Kiki",
+    "email": "kiki@gmail.com",
+    "password": "123456",
+    "confPassword": "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "kiki@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE  http://localhost:5000/logout
